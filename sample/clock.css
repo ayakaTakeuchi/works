@@ -1,0 +1,52 @@
+//全体
+body {
+    background-color: rgba(24, 24, 24, 0.0);//最後が不透明度0〜1.0
+    transition:background-color 1s linear 0s , width 2s linear 0s;
+    color: #fff;
+    //-webkit-filter: blur(10px);
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+}
+body:hover {
+  background-color:rgba(24, 24, 24, 0.0);
+  position: absolute;
+//-webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  //-webkit-filter: blur(10px);
+  //filter: blur(10px);
+}
+
+img{
+  width:2000px;
+  height:1000px;
+  background-color:rgba(24, 24, 24, 0.5);
+  opacity:0.5;
+  //transition:/*background-repeat 20s, */opacity 20s, background-color 20s, linear 0s , width 100s, linear 0s;
+  background-repeat:repeat;
+　-webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+//video:hover {
+  //background-repeat:repeat;
+  //width:1300px;
+  //height:1000px;
+  //background-color:rgba(24, 24, 24, 1.0);
+  //opacity:1.0;
+　//-webkit-filter: blur(10px);
+  //filter: blur(10px);
+//}
+@-webkit-keyframes blinking {
+ from {
+   opacity: 1.0;/*透明度100%*/
+ }
+ to {
+   opacity: 0.0;/*透明度80%*/
+ }
+}
+blinking{
+-webkit-animation-name: pulse;/* 実行する名前 */
+-webkit-animation-duration: 1.0s;/* 1.0秒かけて実行 */
+-webkit-animation-iteration-count:infinite;/* 何回実行するか。infiniteで無限 */
+-webkit-animation-timing-function:ease-in-out;/* イーズインアウト */
+-webkit-animation-direction: alternate;/* alternateにするとアニメーションが反復 */
+-webkit-animation-delay: 0s; /* 実行までの待ち時間 */
+}

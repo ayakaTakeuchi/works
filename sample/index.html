@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link href="./clock.css" rel="stylesheet">
+<title>Sample</title>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+// $(function() {
+//   setInterval(function(){
+//   $.get("read.php", {
+//     // 引数
+//   }, function (pose, dataType){
+//
+//     if(pose[pose.length-1].pose == 1){
+//       //mitenai
+//       var alpha=1.0;
+//       ShowImage(alpha);
+//     }else if(pose[pose.length-1].pose == 2){
+//       //miteru
+//       var alpha=0.0;
+//       ShowImage(alpha);
+//      //console.log(pose[pose.length-1].pose);
+//     }
+//   }
+// );
+// },3000);
+// });
+
+function ShowImage(){
+ var blinking = document.getElementById('blinking');
+setInterval(function() {
+  blinking.style.display = (blinking.style.display == 'none' ? '' : 'none');
+}, 950);
+  document.getElementById("img").src = "./redFilter.jpg";
+  // document.getElementById("img").style = "opacity:"+alpha;
+  document.getElementById("mov").src = "./警報09.mp3";
+}
+</script>
+
+<body onload="ShowImage();">
+  <div id="blinking">
+    <p>
+    <img id="img">
+    <audio id="mov" autoplay loop></audio>
+    </p>
+  </div>
+</body>
+</html>
